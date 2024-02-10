@@ -7,6 +7,7 @@
     --background-color: #ffffff;
     --primary-text: #1e1e1e;
     --secondary-text: #767a7f;
+    --button-padding: 8px 16px;
     --gap: 20px;
 }
 
@@ -20,7 +21,6 @@
 html, 
 body {
     padding: 0 4.5rem;
-    height: 100%;
     background-color: var(--background-color);
 }
 
@@ -29,6 +29,14 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     color: var(--primary-text);
+}
+
+button {
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 /* header */
@@ -61,11 +69,15 @@ header {
     border-radius: 100%;
 }
 
-nav a {
+a {
     text-decoration: none;
     color: var(--secondary-text);
     text-transform: lowercase;
     margin-right: 10px;
+}
+
+nav a:hover {
+    color: var(--primary-text);
 }
 
 /* section */
@@ -123,4 +135,61 @@ section {
 
 .sneaker-details {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.sneaker-details .details-description p {
+    color: var(--secondary-text);
+    max-width: 650px;
+}
+
+.sneaker-details .button-container {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap);
+}
+
+.sizes select {
+    max-width: 50%;
+    text-align: center;
+    padding: var(--button-padding);
+}
+
+.quantity {
+    width: 25%;
+    background-color: var(--background-color);
+    border: var(--primary-text) 1px solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--gap);
+    padding: var(--button-padding);
+}
+
+.quantity button {
+    font-weight: 600;
+    background-color: transparent;
+}
+
+.add-to-bag {
+    width: 25%;
+    padding: var(--button-padding);
+    background-color: var(--primary-text);
+    color: var(--background-color);
+}
+
+/* footer */
+
+footer {
+    margin: 0 0 2rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer a {
+    color: var(--primary-text);
 }
