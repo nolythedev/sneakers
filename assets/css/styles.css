@@ -7,6 +7,7 @@
     --background-color: #ffffff;
     --primary-text: #1e1e1e;
     --secondary-text: #767a7f;
+    --gap: 20px;
 }
 
 /* body */
@@ -52,7 +53,7 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 20px;
+    gap: var(--gap);
 }
 
 .header-right img {
@@ -67,11 +68,59 @@ nav a {
     margin-right: 10px;
 }
 
+/* section */
+
+section {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+}
+
+
 /* image-gallery */
 
+.image-gallery-grid {
+  
+    width: 50%;
+    display: grid;
+    gap: var(--gap);
+    grid-template-rows: 600px 200px;
+    grid-template-areas: 
+    "main-image main-image main-image"
+    "image-1 image-2 image-3"
+    ;
+}
+
+.image-gallery-area {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 #main-image {
-    /* grid-area: projectOne; */
+    grid-area: main-image;
     background-image: url(/assets/images/shoe-1.jpeg);
     /* background-color: #2d323f; */
 
+}
+
+#image-1 {
+    grid-area: image-1;
+    background-image: url(/assets/images/shoe-2.jpg);
+}
+#image-2 {
+    grid-area: image-2;
+    background-image: url(/assets/images/shoe-3.jpg);
+}
+#image-3 {
+    grid-area: image-3;
+    background-image: url(/assets/images/shoe-4.jpeg);
+}
+
+/* sneaker details */
+
+.sneaker-details {
+    width: 50%;
 }
