@@ -94,7 +94,6 @@ section {
 /* image-gallery */
 
 .image-gallery-grid {
-  
     width: 50%;
     display: grid;
     gap: var(--gap);
@@ -106,15 +105,19 @@ section {
 }
 
 .image-gallery-area {
+    background-color: #f1efee;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+}
+
+.image-gallery-area:hover {
+    cursor: pointer;
 }
 
 #main-image {
     grid-area: main-image;
-    background-image: url(/assets/images/shoe-1.jpeg);
-    /* background-color: #2d323f; */
+    background-image: url(/assets/images/shoe-1.jpg);
 
 }
 
@@ -128,7 +131,7 @@ section {
 }
 #image-3 {
     grid-area: image-3;
-    background-image: url(/assets/images/shoe-4.jpeg);
+    background-image: url(/assets/images/shoe-4.jpg);
 }
 
 /* sneaker details */
