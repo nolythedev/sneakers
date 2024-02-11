@@ -32,13 +32,13 @@ for (let i = 0; i < productImage.length; i++) {
         event.preventDefault();
 
         // set background of main image to clicked product image
-        imageMain.style.backgroundImage = `url(../assets/images/${event.target.dataset.image}.jpg)`;
+        imageMain.style.backgroundImage = `url(assets/images/${event.target.dataset.image}.jpg)`;
         // set the main image data attr to the attr of the clicked product image
         imageMain.dataset.image = event.target.dataset.image;
         // set the current image var to be the clicked product's data attr
         event.target.dataset.image = currentImage;
         // set the background image of the clicked image to the previous current image data attr
-        event.target.style.backgroundImage = `url(../assets/images/${currentImage}.jpg)`;
+        event.target.style.backgroundImage = `url(assets/images/${currentImage}.jpg)`;
         // update the current image to the new main image's data attr 
         currentImage = imageMain.dataset.image;
 
